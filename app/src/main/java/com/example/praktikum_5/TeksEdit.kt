@@ -58,8 +58,7 @@ fun FormDataDiri(modifier: Modifier
         )
         Row {
             gender.forEach { item ->
-                Row(
-                    modifier = Modifier.selectable(
+                Row(modifier = Modifier.selectable(
                     selected = textJK == item,
                     onClick = { textJK = item }
                 ), verticalAlignment = Alignment.CenterVertically) {
@@ -76,40 +75,40 @@ fun FormDataDiri(modifier: Modifier
             value = textAlamat,
             singleLine = true,
             modifier = Modifier.width(width = 250.dp),
-            label = { Text(text = "Alamat Lengkap") },
+            label = { Text(text = "Alamat Lengkap")},
             onValueChange = {
                 textAlamat = it
             }
         )
 
         Divider(
-            modifier = Modifier.padding(
-                bottom = dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
-                    id = R.dimen.padding_medium
-                )
-            ),
+            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
+                id = R.dimen.padding_medium
+            )),
             thickness = dimensionResource(id = R.dimen.divider_tipis),
             color = Color.DarkGray
-        )
-        Button(
+            )
+        Button (
             modifier = Modifier.fillMaxWidth(fraction = 1f),
 
             enabled = textAlamat.isNotEmpty(),
             onClick = {
-                nama = textNama
-                jenis = textJK
-                alamat = textAlamat
+                nama=textNama
+                jenis=textJK
+                alamat=textAlamat
             }
         ) {
             Text(text = stringResource(id = R.string.submit))
         }
 
         Divider(
-            modifier = Modifier.padding(
-                bottom = dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
-                    id = R.dimen.padding_medium
-                )
-            ),
+            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
+                id = R.dimen.padding_medium
+            )),
+            thickness = dimensionResource(id = R.dimen.divider_tipis),
+            color = Color.DarkGray
         )
+
+
     }
 }
