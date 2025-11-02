@@ -209,6 +209,18 @@ fun Praktikum5(modifier: Modifier
                     }
                 )
 
+                Spacer(modifier = Modifier.height(5.dp))
+
+                Text(
+                    text = "Jenis Kelamin",
+                    fontSize = 17.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black,
+                    modifier = Modifier.padding(
+                        start = 68.dp,
+                        top = 10.dp,
+                    )
+                )
             }
         }
     }
