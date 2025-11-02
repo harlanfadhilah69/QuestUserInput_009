@@ -101,6 +101,18 @@ fun Praktikum5(modifier: Modifier
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Card(
+                modifier = Modifier
+                    .padding(top = 120.dp, start = 10.dp, end = 10.dp)
+                    .fillMaxWidth()
+                    .height(690.dp),
+                shape = RoundedCornerShape(30.dp),
+                colors = CardDefaults.outlinedCardColors(
+                    containerColor = Color.LightGray.copy(alpha = 0.8f)
+                )
+            ) {
+
+            }
         }
     }
 }
