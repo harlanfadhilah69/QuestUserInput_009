@@ -165,6 +165,20 @@ fun Praktikum5(modifier: Modifier
                         }
                     )
 
+                    OutlinedTextField(
+                        value = textRT,
+                        singleLine = true,
+                        shape = MaterialTheme.shapes.large,
+                        modifier = Modifier
+                            .width(width = 120.dp)
+                            .padding(top = 20.dp, start = 35.dp, end = 20.dp)
+                            .height(height = 70.dp),
+                        label = { Text(text = "RT") },
+                        onValueChange = {
+                            textRT = it
+                        }
+                    )
+
                 }
             }
         }
