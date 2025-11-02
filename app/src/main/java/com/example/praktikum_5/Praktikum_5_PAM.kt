@@ -179,6 +179,19 @@ fun Praktikum5(modifier: Modifier
                         }
                     )
 
+                    OutlinedTextField(
+                        value = textRW,
+                        singleLine = true,
+                        shape = MaterialTheme.shapes.large,
+                        modifier = Modifier
+                            .width(width = 60.dp)
+                            .padding(top = 20.dp, start = 0.dp, end = 0.dp)
+                            .height(height = 70.dp),
+                        label = { Text(text = "RW") },
+                        onValueChange = {
+                            textRW = it
+                        }
+                    )
                 }
             }
         }
