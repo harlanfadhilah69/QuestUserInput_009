@@ -73,5 +73,18 @@ fun Praktikum5(modifier: Modifier
 
     val gender:List<String> = listOf("Laki-laki", "Perempuan")
 
+    fun convertMillisToDate(millis: Long): String {
+        val formatter = SimpleDateFormat("dd/MM/yyyy", Locale("in", "ID"))
+        return  formatter.format(Date(millis))
+    }
 
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(id = R.drawable.backgroundddd),
+            contentDescription = "Demo Background",
+            contentScale = ContentScale.FillBounds,
+            modifier = modifier.matchParentSize()
+        )
+    }
 }
