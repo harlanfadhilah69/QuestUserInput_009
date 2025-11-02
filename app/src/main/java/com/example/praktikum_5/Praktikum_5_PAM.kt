@@ -86,5 +86,15 @@ fun Praktikum5(modifier: Modifier
             contentScale = ContentScale.FillBounds,
             modifier = modifier.matchParentSize()
         )
+        Text(
+            text = "Form Registrasi",
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.White,
+            modifier = Modifier.padding(
+                start = 88.dp,
+                top = 56.dp,
+            )
+        )
     }
 }
