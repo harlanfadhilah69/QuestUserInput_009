@@ -62,5 +62,16 @@ fun Praktikum5(modifier: Modifier
     var showDatePicker by remember { mutableStateOf(false) }
     var showAlertDialog by remember { mutableStateOf(false) }
 
+    var nama by remember {mutableStateOf(value = "")}
+    var kota by remember {mutableStateOf(value = "")}
+    var tanggal by remember {mutableStateOf(value = "")}
+    var rt by remember {mutableStateOf(value = "")}
+    var rw by remember {mutableStateOf(value = "")}
+    var umur by remember {mutableStateOf(value = "")}
+    var jenis by remember {mutableStateOf(value = "")}
+    var checked by remember {mutableStateOf(false)}
+
+    val gender:List<String> = listOf("Laki-laki", "Perempuan")
+
 
 }
