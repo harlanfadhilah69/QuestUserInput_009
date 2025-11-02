@@ -79,15 +79,14 @@ fun Praktikum5(modifier: Modifier
     }
 
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(modifier = Modifier.fillMaxSize()){
         Image(
             painter = painterResource(id = R.drawable.backgroundddd),
             contentDescription = "Demo Background",
             contentScale = ContentScale.FillBounds,
             modifier = modifier.matchParentSize()
         )
-        Text(
-            text = "Form Registrasi",
+        Text(text = "Form Registrasi",
             fontSize = 35.sp,
             fontWeight = FontWeight.Bold,
             color = Color.White,
@@ -96,11 +95,9 @@ fun Praktikum5(modifier: Modifier
                 top = 56.dp,
             )
         )
-        Column(
-            modifier = Modifier.padding(top = 5.dp),
+        Column (modifier = Modifier.padding(top = 5.dp),
             verticalArrangement = Arrangement.Top,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+            horizontalAlignment = Alignment.CenterHorizontally){
             Card(
                 modifier = Modifier
                     .padding(top = 120.dp, start = 10.dp, end = 10.dp)
@@ -227,7 +224,7 @@ fun Praktikum5(modifier: Modifier
                             modifier = Modifier.selectable(
                                 selected = textJK == item,
                                 onClick = { textJK = item }
-                            ).padding(top = 5.dp, start = 50.dp, end = 0.dp),
+                            ).padding(top = 5.dp,start = 50.dp, end = 0.dp),
                             verticalAlignment = Alignment.CenterVertically) {
                             RadioButton(
                                 selected = textJK == item,
@@ -243,8 +240,7 @@ fun Praktikum5(modifier: Modifier
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Checkbox(
-                        modifier = Modifier.padding(start = 55.dp, end = 5.dp),
+                    Checkbox( modifier= Modifier.padding(start = 55.dp, end = 5.dp),
                         checked = checked,
                         onCheckedChange = { checked = it }
                     )
@@ -252,23 +248,28 @@ fun Praktikum5(modifier: Modifier
                         "Saya setuju dengan syarat dan ketentuan yang berlaku"
                     )
                 }
-                Button(
+                Button (
                     modifier = Modifier.fillMaxWidth(fraction = 1f)
                         .padding(top = 30.dp, start = 50.dp, end = 50.dp)
                         .height(height = 70.dp),
 
                     enabled = textKota.isNotEmpty(),
                     onClick = {
-                        nama = textNama
-                        kota = textKota
-                        tanggal = textTanggal
-                        rt = textRT
-                        rw = textRW
-                        jenis = textJK
+                        nama=textNama
+                        kota=textKota
+                        tanggal=textTanggal
+                        rt=textRT
+                        rw=textRW
+                        jenis=textJK
                         showAlertDialog = true
                     }
                 ) {
-
+                    Text(text =
+                        stringResource(id = R.string.submit),
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
                 }
             }
         }
