@@ -96,5 +96,11 @@ fun Praktikum5(modifier: Modifier
                 top = 56.dp,
             )
         )
+        Column(
+            modifier = Modifier.padding(top = 5.dp),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+        }
     }
 }
