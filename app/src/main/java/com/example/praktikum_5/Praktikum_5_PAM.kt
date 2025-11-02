@@ -193,6 +193,22 @@ fun Praktikum5(modifier: Modifier
                         }
                     )
                 }
+                Spacer(modifier = Modifier.height(5.dp))
+
+                OutlinedTextField(
+                    value = textUmur,
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.large,
+                    modifier = Modifier
+                        .width(width = 370.dp)
+                        .padding(top = 20.dp, start = 40.dp)
+                        .height(height = 70.dp),
+                    label = { Text(text = "Umur") },
+                    onValueChange = {
+                        textUmur = it
+                    }
+                )
+
             }
         }
     }
