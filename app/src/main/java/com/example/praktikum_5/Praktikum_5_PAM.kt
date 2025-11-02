@@ -274,4 +274,16 @@ fun Praktikum5(modifier: Modifier
             }
         }
     }
+
+    if (showDatePicker) {
+        DatePickerModal(
+            onDateSelected = { selectedDateMillis ->
+                selectedDateMillis?.let {
+                    textTanggal = convertMillisToDate(it)
+                }
+            },
+            onDismiss = { showDatePicker = false }
+        )
+    }
+
 }
