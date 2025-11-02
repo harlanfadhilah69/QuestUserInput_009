@@ -140,6 +140,32 @@ fun Praktikum5(modifier: Modifier
                         textKota = it
                     }
                 )
+                Spacer(modifier = Modifier.height(3.dp))
+                Row {
+                    OutlinedTextField(
+                        value = textTanggal,
+                        singleLine = true,
+                        shape = MaterialTheme.shapes.large,
+                        modifier = Modifier
+                            .width(width = 210.dp)
+                            .padding(top = 20.dp, start = 20.dp, end = 0.dp)
+                            .height(height = 70.dp),
+                        label = { Text(text = "Tanggal Lahir") },
+                        readOnly = true,
+                        onValueChange = {
+                            textTanggal = it
+                        },
+                        trailingIcon = {
+                            IconButton(onClick = { showDatePicker = true }) {
+                                Icon(
+                                    imageVector = Icons.Default.DateRange,
+                                    contentDescription = "Pilih Tanggal"
+                                )
+                            }
+                        }
+                    )
+
+                }
             }
         }
     }
