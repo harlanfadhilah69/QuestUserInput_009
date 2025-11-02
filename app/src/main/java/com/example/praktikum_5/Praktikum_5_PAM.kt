@@ -252,6 +252,24 @@ fun Praktikum5(modifier: Modifier
                         "Saya setuju dengan syarat dan ketentuan yang berlaku"
                     )
                 }
+                Button(
+                    modifier = Modifier.fillMaxWidth(fraction = 1f)
+                        .padding(top = 30.dp, start = 50.dp, end = 50.dp)
+                        .height(height = 70.dp),
+
+                    enabled = textKota.isNotEmpty(),
+                    onClick = {
+                        nama = textNama
+                        kota = textKota
+                        tanggal = textTanggal
+                        rt = textRT
+                        rw = textRW
+                        jenis = textJK
+                        showAlertDialog = true
+                    }
+                ) {
+
+                }
             }
         }
     }
