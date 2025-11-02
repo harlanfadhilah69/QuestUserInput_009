@@ -238,6 +238,20 @@ fun Praktikum5(modifier: Modifier
                         }
                     }
                 }
+                Spacer(modifier = Modifier.height(5.dp))
+
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Checkbox(
+                        modifier = Modifier.padding(start = 55.dp, end = 5.dp),
+                        checked = checked,
+                        onCheckedChange = { checked = it }
+                    )
+                    Text(
+                        "Saya setuju dengan syarat dan ketentuan yang berlaku"
+                    )
+                }
             }
         }
     }
