@@ -112,6 +112,19 @@ fun Praktikum5(modifier: Modifier
                 )
             ) {
 
+                OutlinedTextField(
+                    value = textNama,
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.large,
+                    modifier = Modifier
+                        .width(width = 390.dp)
+                        .padding(top = 25.dp, start = 20.dp)
+                        .height(height = 70.dp),
+                    label = { Text(text = "Nama Lengkap") },
+                    onValueChange = {
+                        textNama = it
+                    }
+                )
             }
         }
     }
