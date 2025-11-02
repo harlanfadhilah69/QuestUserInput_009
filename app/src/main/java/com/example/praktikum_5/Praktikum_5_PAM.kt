@@ -125,6 +125,21 @@ fun Praktikum5(modifier: Modifier
                         textNama = it
                     }
                 )
+                Spacer(modifier = Modifier.height(3.dp))
+
+                OutlinedTextField(
+                    value = textKota,
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.large,
+                    modifier = Modifier
+                        .width(width = 390.dp)
+                        .padding(top = 20.dp, start = 20.dp)
+                        .height(height = 70.dp),
+                    label = { Text(text = "Kota Asal") },
+                    onValueChange = {
+                        textKota = it
+                    }
+                )
             }
         }
     }
