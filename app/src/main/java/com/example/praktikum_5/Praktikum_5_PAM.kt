@@ -51,6 +51,7 @@ import java.util.Locale
 @Composable
 fun Praktikum5(modifier: Modifier
 ){
+
     var textNama by remember {mutableStateOf(value = "")}
     var textKota by remember {mutableStateOf(value = "")}
     var textTanggal by remember {mutableStateOf(value = "")}
