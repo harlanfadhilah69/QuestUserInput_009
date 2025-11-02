@@ -286,4 +286,36 @@ fun Praktikum5(modifier: Modifier
         )
     }
 
+    if (showAlertDialog) {
+        AlertDialog(
+            onDismissRequest = {
+                showAlertDialog = false
+            },
+            title = {
+                Text(text = "Registrasi Berhasil")
+            },
+            text = {
+                Text(text = "Data Anda telah berhasil diregistrasi")
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showAlertDialog = false
+                    }
+                ) {
+                    Text("OK")
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    onClick = { showAlertDialog = false }
+                ) {
+                    Text("Batal")
+                }
+            },
+            icon = {
+                Icon(imageVector = Icons.Default.Info, contentDescription = null)
+            }
+        )
+    }
 }
