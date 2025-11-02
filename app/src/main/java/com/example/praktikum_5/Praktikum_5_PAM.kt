@@ -221,6 +221,23 @@ fun Praktikum5(modifier: Modifier
                         top = 10.dp,
                     )
                 )
+                Row {
+                    gender.forEach { item ->
+                        Row(
+                            modifier = Modifier.selectable(
+                                selected = textJK == item,
+                                onClick = { textJK = item }
+                            ).padding(top = 5.dp, start = 50.dp, end = 0.dp),
+                            verticalAlignment = Alignment.CenterVertically) {
+                            RadioButton(
+                                selected = textJK == item,
+                                onClick = {
+                                    textJK = item
+                                })
+                            Text(text = item)
+                        }
+                    }
+                }
             }
         }
     }
